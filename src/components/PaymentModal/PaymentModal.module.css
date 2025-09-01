@@ -1,0 +1,18 @@
+.backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); display: grid; place-items: center; z-index: 100; backdrop-filter: blur(3px); animation: fadeIn 0.25s ease-in-out; }
+.modal { background: #fff; width: min(520px, 92%); border-radius: 1rem; padding: 1.25rem 1.5rem; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25); animation: slideUp 0.3s ease-in-out; max-height: 90vh; overflow-y: auto; }
+.form { display: grid; gap: 0.8rem; margin-top: 1rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.form input, .form textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid #ddd; border-radius: 0.6rem; font-size: 1rem; font-family: inherit; transition: border-color 0.25s, box-shadow 0.25s, background 0.25s; outline: none; background: #fafafa; }
+.form input:hover, .form textarea:hover { border-color: #bbb; }
+.form input:focus, .form textarea:focus { border-color: #2a9d8f; box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2); background: #fff; }
+.form textarea { resize: vertical; min-height: 100px; line-height: 1.4; }
+.modal button { margin-right: 0.5rem; padding: 0.6rem 1.2rem; border: none; border-radius: 0.5rem; font-size: 0.95rem; cursor: pointer; transition: background 0.25s, transform 0.15s; }
+.modal button:hover { transform: translateY(-1px); }
+.btnPrimary { background: #2a9d8f; color: #fff; }
+.btnPrimary:hover { background: #23867b; }
+.btnCancel { background: #b22222; color: #fff; }
+.btnCancel:hover { background: #8b1a1a; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (max-width: 480px) { .modal { width: 95%; padding: 1rem; border-radius: 0.8rem; } .row { grid-template-columns: 1fr; gap: 0.6rem; } .form { display: flex; flex-direction: column; } .modal button { width: 100%; margin: 0.3rem 0; font-size: 0.9rem; } }

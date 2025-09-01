@@ -1,0 +1,14 @@
+.modalOverlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); display: flex; justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(4px); animation: fadeIn 0.25s ease-in-out; }
+.modal { background: #fff; padding: 1.5rem 1.75rem; border-radius: 12px; width: min(360px, 92%); text-align: center; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25); animation: slideUp 0.3s ease-in-out; }
+.modal h3 { margin-bottom: 1rem; font-size: 1.2rem; color: #222; }
+.modalActions { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.25rem; }
+.modalActions button { flex: 1; padding: 0.65rem 1rem; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.25s, transform 0.15s; width: 100%; }
+.modalActions button:hover { transform: translateY(-1px); }
+.confirmBtn { background: #2a9d8f; color: #fff; }
+.confirmBtn:hover { background: #427e5b; }
+.cancelBtn { background: #a53e3ebb; color: #fff; }
+.cancelBtn:hover { background: #8a4840; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (max-width: 480px) { .modal { padding: 1.25rem; width: 95%; } .modalActions { flex-direction: column; } }

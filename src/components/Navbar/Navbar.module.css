@@ -1,0 +1,27 @@
+.header{ position:sticky; top:0; z-index:50; background:#4cb985; border-bottom:1px solid #eee; color: white;}
+.navWrap{ display:flex; align-items:center; justify-content:space-between; padding:18.5px 0; height:73px; }
+.brand{ display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.2px; }
+.logo{ width:45px; height:45px; object-fit:contain; border-radius:8px; }
+.brand span{ font-size:1.4rem; }
+.nav{ display:flex; align-items:center; gap:1rem; }
+.nav a{ padding:.4rem .6rem; border-radius:8px; }
+.nav a.active{ background:var(--primary); color:#fff; }
+.contactBtn{ margin-left:.5rem; }
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .navWrap { padding: 12px 0; height: 65px; }
+    .logo { width: 38px; height: 38px; }
+    .brand span { font-size: 1.2rem; }
+    .nav { gap: 0.5rem; }
+    .nav a { padding: 0.3rem 0.5rem; font-size: 0.9rem; }
+  }
+  
+  @media (max-width: 480px) {
+    .navWrap { padding: 10px 0; height: 60px; }
+    .logo { width: 35px; height: 35px; }
+    .brand span { font-size: 1.1rem; }
+    .nav { gap: 0.3rem; }
+    .nav a { padding: 0.25rem 0.4rem; font-size: 0.85rem; }
+  }
+  

@@ -1,0 +1,24 @@
+.card{ background:#fff; border:1px solid #eee; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.image{ width:100%; height:180px; object-fit:cover; }
+.body{ padding:1rem; }
+.title{ margin:.2rem 0; font-size:1.05rem; }
+.cat{ margin:0; color:#777; font-size:.9rem; }
+.price{ font-weight:800; margin:.6rem 0; }
+.controls{ display:flex; gap:.6rem; align-items:center; }
+.controls input{ width:70px; padding:.4rem; border:1px solid #ccc; border-radius:8px; }
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .image { height: 160px; }
+  .body { padding: 0.8rem; }
+  .title { font-size: 1rem; }
+  .controls { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .controls input { width: 100%; padding: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .image { height: 140px; }
+  .body { padding: 0.7rem; }
+  .title { font-size: 0.95rem; }
+  .cat { font-size: 0.85rem; }
+}
