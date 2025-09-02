@@ -28,6 +28,7 @@ export default function Cart(){
     return (
       <div className="container" style={{padding:'2rem 0'}}>
         <h2 style={{marginBottom:'1.5rem'}}>Tu carrito está vacío</h2>
+        <p style={{marginBottom:'1rem'}}>No hay productos en el carrito.</p>
         <p style={{marginBottom:'2rem'}}>Explora nuestros productos frescos.</p>
         <Link to="/productos" className="btn btnPrimary" style={{display:'inline-block'}}>Ir a Productos</Link>
       </div>

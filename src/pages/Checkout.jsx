@@ -41,7 +41,7 @@ export default function Checkout() {
         </div>
 
         {items.length === 0 ? (
-          <p>No hay productos en el carrito.</p>
+          <></> 
         ) : (
           <div className={styles.paymentSection}>
             <div className={styles.totalInfo}>
