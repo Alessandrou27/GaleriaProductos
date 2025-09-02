@@ -1,86 +1,21 @@
-/* Fondo del modal */
-.backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    display: grid;
-    place-items: center;
-    z-index: 100;
-    backdrop-filter: blur(3px); /* Difuminado elegante */
-    animation: fadeIn 0.25s ease-in-out;
-  }
-  
-  /* Contenedor del modal */
-  .modal {
-    background: #fff;
-    width: min(520px, 92%);
-    border-radius: 1rem;
-    padding: 1.25rem 1.5rem;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
-    animation: slideUp 0.3s ease-in-out;
-    max-height: 90vh;
-    overflow-y: auto; 
-  }
-  
-  /* Contenido del formulario */
-  .form {
-    display: grid;
-    gap: 0.8rem;
-    margin-top: 0.8rem;
-  }
-  
-  /* Acciones (botones) */
-  .actions {
-    display: flex;
-    gap: 0.75rem;
-    justify-content: flex-end;
-    margin-top: 1rem;
-  }
+.backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); display: grid; place-items: center; z-index: 100; backdrop-filter: blur(3px); animation: fadeIn 0.25s ease-in-out; }
+.modal { background: #fff; width: min(520px, 92%); border-radius: 1rem; padding: 1.25rem 1.5rem; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25); animation: slideUp 0.3s ease-in-out; max-height: 90vh; overflow-y: auto; }
+.form { display: grid; gap: 0.8rem; margin-top: 0.8rem; }
+.actions { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1rem; }
+.form input, .form textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid #ddd; border-radius: 0.6rem; font-size: 1rem; font-family: inherit; transition: border-color 0.25s, box-shadow 0.25s; outline: none; background: #fafafa; }
+.form input:hover, .form textarea:hover { border-color: #bbb; }
+.form input:focus, .form textarea:focus { border-color: #2a9d8f; box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2); background: #fff; }
+.form textarea { resize: vertical; min-height: 100px; line-height: 1.4; }
+.thankYou { text-align: center; padding: 2rem 1rem; }
+.thankYou h3 { font-size: 1.8rem; color: #4caf50; margin-bottom: 1rem; }
+.thankYou p { font-size: 1.1rem; color: #333; }
 
-  /* Inputs y textarea */
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1.5px solid #ddd;
-  border-radius: 0.6rem;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.25s, box-shadow 0.25s;
-  outline: none;
-  background: #fafafa;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Hover */
-.form input:hover,
-.form textarea:hover {
-  border-color: #bbb;
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
-
-/* Focus */
-.form input:focus,
-.form textarea:focus {
-  border-color: #2a9d8f;       /* color primario */
-  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
-  background: #fff;
-}
-
-/* Textarea solo */
-.form textarea {
-  resize: vertical; /* permitir solo vertical */
-  min-height: 100px;
-  line-height: 1.4;
-}
-
-  
-  /* Animaciones */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  

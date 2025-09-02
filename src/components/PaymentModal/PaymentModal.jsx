@@ -11,7 +11,7 @@ export default function PaymentModal({ open, onClose, onConfirm, total }){
           <input placeholder="Número de tarjeta" required maxLength={19}/>
           <div className={styles.row}>
             <input placeholder="MM/AA" required maxLength={5}/>
-            <input placeholder="CVV" required maxLength={4}/>
+            <input placeholder="CVV" required maxLength={3}/>
           </div>
           <button className={styles.btnPrimary} type="submit">Simular pago</button>
           <button className={styles.btnCancel} type="button" onClick={onClose}>Cancelar</button>
