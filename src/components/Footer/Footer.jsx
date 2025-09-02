@@ -9,7 +9,6 @@ export default function Footer(){
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.grid3}>
-          {/* Columna izquierda - Información de la empresa */}
           <div className={styles.companyInfo}>
             <div className={styles.logo}>
               <span className={styles.logoIcon}>🥑</span>
